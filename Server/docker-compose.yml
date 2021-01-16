@@ -1,0 +1,10 @@
+version: "3.7"
+services: 
+  db:
+    container_name: db
+    image: mongo:4.0
+    ports: 
+      - "27017:27017"
+    environment: 
+      MONGO_INIDB_ROOT_USERNAME: mongoadmin
+      MONGO_INIDB_ROOT_USERNAME: secret

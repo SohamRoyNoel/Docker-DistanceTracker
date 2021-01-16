@@ -1,0 +1,5 @@
+{
+    "login_POST": "/api/v1/auth/login",
+    "admin_Location_POST": "/api/v1/location/city/",
+    "user_Location_GET": "/api/v1/location/city/"
+}

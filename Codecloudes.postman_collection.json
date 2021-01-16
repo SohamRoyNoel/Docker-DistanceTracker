@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "0bc0b042-67b0-4bd6-9648-596733c4475c",
+		"name": "Codecloudes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/auth/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCity_Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2E1MTRiNWQyYzEyYzc0NDliZTA0MiIsImlhdCI6MTYxMDczNzk1OSwiZXhwIjoxNjEwODI0MzU5fQ.mpDQVo6OjZKptqkx-ORsdp-BKjdCG_j2-4HEO2ZGlf4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/location/city/Kolkata,IN",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"location",
+						"city",
+						"Kolkata,IN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserCity_DistanceCalculator",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2E1MTRiNWQyYzEyYzc0NDliZTA0MiIsImlhdCI6MTYxMDczNzk1OSwiZXhwIjoxNjEwODI0MzU5fQ.mpDQVo6OjZKptqkx-ORsdp-BKjdCG_j2-4HEO2ZGlf4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/location/city/Agarpara,IN",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"location",
+						"city",
+						"Agarpara,IN"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
